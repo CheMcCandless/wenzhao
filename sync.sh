@@ -13,6 +13,7 @@ md_page=$video_dir/index.md
 youtube_url=https://www.youtube.com/playlist?list=PL2DywIam67jsFoEhIvVhB0HukSP8IAIt0
 
 ip=$(/sbin/ifconfig | grep "inet addr" | sed -n 1p | cut -d':' -f2 | cut -d' ' -f1)
+ts=$(date '+%m%d%H')
 
 
 # download videos
@@ -36,8 +37,8 @@ for v in $(ls -t *.mp4); do
 	title=$(echo $v | cut -d'-' -f1)
 	name=$(echo $v | sed "s/'//g")
 	mv $v $name
-	echo "<a href='http://$ip/wenzhao/$name'>$title</a></br></br>" >> $index_page
-	echo "##### <a href='http://$ip/wenzhao/$name'>$title</a>" >> $md_page
+	echo "<a href='http://$ip/wenzhao/$name?t=$ts'>$title</a></br></br>" >> $index_page
+	echo "##### <a href='http://$ip/wenzhao/$name?t=$ts'>$title</a>" >> $md_page
 done
 echo "</body></html>" >> $index_page
 
