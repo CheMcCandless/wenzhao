@@ -35,6 +35,7 @@ EOF
 for v in $(ls -t *.mp4); do
 	title=$(echo $v | cut -d'-' -f1)
 	name=$(echo $v | sed "s/'//g")
+	mv $v $name
 	echo "<a href='http://$ip/wenzhao/$name'>$title</a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip/wenzhao/$name'>$title</a>" >> $md_page
 done
