@@ -35,14 +35,44 @@ EOF
 
 for v in $(ls -t *.mp4); do
 	name=$(echo $v | sed "s/'//g")
-	mv $v $name
+	mv $v $name > /dev/null 2>&1
 done
 
 for v in $(ls -t *.mp4); do
 	title=$(echo $v | cut -d'-' -f1)
 	name=$(echo $v | sed "s/'//g")
-	echo "<a href='http://$ip/wenzhao/$name?t=$ts'>$title</a></br></br>" >> $index_page
-	echo "##### <a href='http://$ip/wenzhao/$name?t=$ts'>$title</a>" >> $md_page
+	echo "<a href='http://$ip/wenzhao/$name.html?t=$ts'><b>$title</b></a></br></br>" >> $index_page
+	echo "##### <a href='http://$ip/wenzhao/$name.html?t=$ts'>$title</a>" >> $md_page
+	cat > $video_dir/$name.html << EOF
+<head>
+<title>《文昭谈古论今》- $title </title>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel='stylesheet' id='videojs-css' href='https://unpkg.com/video.js@6.7.3/dist/video-js.min.css' type='text/css' media='all' />
+<style>
+#player {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 100%;
+	max-width: 640px;
+}
+</style>
+</head>
+<br/>
+<h4><center>$title</center></h4>
+<center>
+<video id="player" controls autoplay preload="auto">
+	<source src="$name?t=$ts" type="video/mp4">
+</video>
+<p>
+<a href="http://$ip:8000/xtr/gb/2008/11/25/a226263.html"><b>文昭：生活在希望中，做快乐的中国人</b></a><br/><br/>
+<a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球 三亿人觉醒见证中共末日</b></a><br/><br/>
+<a href="http://$ip:10000/videos/jiuping/index.html"><b>《九评共产党》</b></a>&nbsp;&nbsp;
+<a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;
+<a href="https://github.com/gfw-breaker/nogfw/blob/master/README.md" target="_blank"><b> 一键翻墙软件</b></a>
+</center></p>
+EOF
+
 done
 echo "</body></html>" >> $index_page
 
