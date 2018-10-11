@@ -39,8 +39,9 @@ for v in $(ls -t *.mp4); do
 done
 
 for v in $(ls -t *.mp4); do
-	title=$(echo $v | cut -d'-' -f1 | sed "s/ /_/g")
-	name=$(echo $v | sed "s/'//g" | sed "s/ /_/g")
+	title=$(echo $v | cut -d'-' -f1)
+	name=$v
+	af=$(echo $name | sed 's/mp4/mp3/')
 	echo "<a href='http://$ip/wenzhao/$name.html?t=$ts'><b>$title</b></a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip/wenzhao/$name.html?t=$ts'>$title</a>" >> $md_page
 	cat > $video_dir/$name.html << EOF
@@ -65,6 +66,7 @@ for v in $(ls -t *.mp4); do
 	<source src="$name?t=$ts" type="video/mp4">
 </video>
 <p>
+<a href="$af?t=$ts"><b>下载音频</b></a> &nbsp;&nbsp;
 <a href="http://$ip:8000/xtr/gb/prog832.html"><b>文昭新唐人座客节目《热点解读》</b></a><br/><br/>
 <a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a><br/><br/>
 <a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球 三亿人觉醒见证中共末日</b></a><br/><br/>
@@ -90,4 +92,15 @@ sed -i "8 a$plinks" README.md
 git commit -a -m 'ok'
 git push
 
+
+# convert audio
+cd $video_dir 
+for v in $(ls -t *.mp4); do
+	a=$(echo $v | sed 's/mp4/mp3/')	
+	if [ -f $a ]; then
+		echo 'ok'
+	else
+		ffmpeg -i $v -b:a 64K -vn $a
+	fi
+done
 
