@@ -34,13 +34,13 @@ cat > $index_page << EOF
 EOF
 
 for v in $(ls -t *.mp4); do
-	name=$(echo $v | sed "s/'//g")
+	name=$(echo $v | sed "s/'//g" | sed "s/ /_/g")
 	mv $v $name > /dev/null 2>&1
 done
 
 for v in $(ls -t *.mp4); do
-	title=$(echo $v | cut -d'-' -f1)
-	name=$(echo $v | sed "s/'//g")
+	title=$(echo $v | cut -d'-' -f1 | sed "s/ /_/g")
+	name=$(echo $v | sed "s/'//g" | sed "s/ /_/g")
 	echo "<a href='http://$ip/wenzhao/$name.html?t=$ts'><b>$title</b></a></br></br>" >> $index_page
 	echo "##### <a href='http://$ip/wenzhao/$name.html?t=$ts'>$title</a>" >> $md_page
 	cat > $video_dir/$name.html << EOF
