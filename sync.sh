@@ -72,7 +72,7 @@ for v in $(ls -t *.mp4); do
 <a href="http://$ip:10080/gb/8/11/24/n2339512.htm"><b>文昭：生活在希望中，做快乐的中国人</b></a><br/><br/>
 <a href="http://$ip:10000/videos/blog/tuid.html"><b>三退大潮席卷全球 三亿人觉醒见证中共末日</b></a><br/><br/>
 <a href="http://$ip:8000/xtr/gb/prog99.html"><b>《热点互动直播》</b></a>&nbsp;&nbsp;
-<a href="http://$ip:8000/xtr/gb/prog109.html"><b>《大陆新闻解读》</b></a><br/><br/>
+<a href="http://$ip:8000/xtr/gb/prog109.html"><b>《大陆新闻解读》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/jiuping/index.html"><b>《九评共产党》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/mtdwh/index.html"><b>《漫谈党文化》</b></a>&nbsp;&nbsp;<br/><br/>
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相 -《伪火》</b></a>&nbsp;&nbsp;
