@@ -34,7 +34,7 @@ cat > $index_page << EOF
 EOF
 
 for v in $(ls -t *.mp4); do
-	name=$(echo $v | sed "s/'//g" | sed "s/ /_/g")
+	name=$(echo $v | sed "s/'//g" | sed "s/ /_/g" | sed "s/%/_Percents/g")
 	mv $v $name > /dev/null 2>&1
 done
 
