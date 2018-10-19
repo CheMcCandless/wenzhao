@@ -93,8 +93,8 @@ cd /root/wenzhao
 git pull
 sed -i '5,$d' README.md
 cat $md_page >> README.md
-sed -i "8 a$vlinks" README.md
-sed -i "8 a$plinks" README.md
+sed -i "6 a$vlinks" README.md
+sed -i "6 a$plinks" README.md
 git commit -a -m 'ok'
 git push
 
