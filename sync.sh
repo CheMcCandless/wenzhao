@@ -77,9 +77,8 @@ for v in $(ls -t *.mp4); do
 <a href="http://$ip:8000/xtr/gb/prog109.html"><b>《大陆新闻解读》</b></a>&nbsp;&nbsp;<br/><br/>
 <a href="http://$ip:10000/videos/blog/weihuo.html"><b>天安门自焚真相《伪火》</b></a>&nbsp;&nbsp;
 <a href="http://$ip:10000/videos/legend/2.html"><b>“四‧二五”中南海万人上访真相</b></a>&nbsp;&nbsp;<br/><br/>
-</center></p>
-</center></p>
-</center></p>
+</p>
+</center>
 EOF
 
 done
