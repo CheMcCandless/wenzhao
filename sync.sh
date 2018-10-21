@@ -22,6 +22,9 @@ youtube-dl -f 18 \
 	--max-downloads $video_count \
 	-i $youtube_url
 
+# stick
+youtube-dl -f 18 https://www.youtube.com/watch?v=UefWtTqAH_M
+touch *UefWtTqAH_M.mp4
 
 # generate page
 echo > $md_page
@@ -92,8 +95,8 @@ cd /root/wenzhao
 git pull
 sed -i '5,$d' README.md
 cat $md_page >> README.md
-sed -i "6 a$vlinks" README.md
-sed -i "6 a$plinks" README.md
+sed -i "7 a$vlinks" README.md
+sed -i "7 a$plinks" README.md
 git commit -a -m 'ok'
 git push
 
