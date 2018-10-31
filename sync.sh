@@ -42,7 +42,7 @@ for v in $(ls -t *.mp4); do
 done
 
 for v in $(ls -t *.mp4); do
-	title=$(echo $v | cut -d'-' -f1)
+	title=$(echo $v | rev | cut -c17- | rev)
 	name=$v
 	af=$(echo $name | sed 's/mp4/mp3/')
 	echo "<a href='http://$ip/wenzhao/$name.html?t=$ts'><b>$title</b></a></br></br>" >> $index_page
