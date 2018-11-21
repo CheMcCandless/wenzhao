@@ -1,10 +1,10 @@
 #!/bin/bash
 # author: gfw-breaker
 
-folder="wenzhao"
-stick="gDaf0eGjyw4"
+folder="pokong"
+#stick="gDaf0eGjyw4"
 #stick="UefWtTqAH_M"
-youtube_url=https://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA
+youtube_url=https://www.youtube.com/channel/UCwb7avxK-L5vPjMC1ZIGayw
 dl_script=https://raw.githubusercontent.com/gfw-breaker/youtube-video/master/dl.sh
 md_page=/usr/share/nginx/html/$folder/index.md
 
