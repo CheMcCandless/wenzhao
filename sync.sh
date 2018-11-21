@@ -11,8 +11,8 @@ md_page=/usr/share/nginx/html/$folder/index.md
 
 # download
 cd /root/$folder
-wget -q $dl_script -O dl.sh
-#bash dl.sh $folder $youtube_url $stick
+#wget -q $dl_script -O dl.sh
+bash dl.sh $folder $youtube_url $stick
 
 
 # push
