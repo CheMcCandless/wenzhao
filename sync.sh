@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: gfw-breaker
 
-folder="pokong"
+folder="wenzhao"
 #stick="gDaf0eGjyw4"
 #stick="UefWtTqAH_M"
 youtube_url=https://www.youtube.com/channel/UCwb7avxK-L5vPjMC1ZIGayw
@@ -12,7 +12,7 @@ md_page=/usr/share/nginx/html/$folder/index.md
 # download
 cd /root/$folder
 wget -q $dl_script -O dl.sh
-bash dl.sh $folder $youtube_url $stick
+#bash dl.sh $folder $youtube_url $stick
 
 
 # push
