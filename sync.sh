@@ -2,7 +2,7 @@
 # author: gfw-breaker
 
 folder="wenzhao"
-stick="UWBr6wofLHY"
+stick="1I5vouXJtQw"
 #stick="UefWtTqAH_M"
 youtube_url=https://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA
 dl_script=https://raw.githubusercontent.com/gfw-breaker/youtube-video/master/dl.sh
