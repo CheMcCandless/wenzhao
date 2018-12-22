@@ -2,7 +2,8 @@
 # author: gfw-breaker
 
 folder="wenzhao"
-stick="NUZukGNZv6k"
+stick="KW0KGKnr6zw"
+#stick="NUZukGNZv6k"
 #stick="kA52M-Hxi9I"
 #stick="UefWtTqAH_M"
 youtube_url=https://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA
