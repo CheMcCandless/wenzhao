@@ -2,6 +2,7 @@
 ### 《文昭谈古论今》YouTube频道中转站
 ##### 定时自动从[《文昭談古論今》](https://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA) 同步视频信息到此页面。服务器IP可能发生变化, 请收藏此短网址 [https://git.io/wenzhao](https://git.io/wenzhao), 免翻墙直接观看：
 
+---
 
 ##### <a href='http://45.77.188.7:9999/wenzhao/link.122417.KW0KGKnr6zw.mp4.html'>【九评共产.党】之七 -评中国共产.党的杀人历史</a>
 ##### <a href='http://45.77.188.7:9999/wenzhao/link.122417.nNdtykTdJmo.mp4.html'>联盟战略启动，美国诉中国黑客！“黄宗羲定律”与中共誓言减税（20181221第495期）</a>
